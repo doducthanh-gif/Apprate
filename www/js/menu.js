@@ -69,4 +69,19 @@ $(document).ready(function () {
              $('#detail1').empty().append(html)
        }
    })
+   $(document).on('submit', '#addRate', function (){
+       const data = {
+        rOwnerRate: $('#rOwnerRate').val(),
+        rName: $('#rName').val(),
+        rType: $('#rType').val(),
+        date_time: $('#date_time').val(),
+        avgCost: $('#avgCost').val(),
+        ratingForService: $('#ratingForService').val(),
+        ratingForClean: $('#ratingForClean').val(),
+        ratingForFood: $('#ratingForFood').val(),
+        // notes: $('#notes').val(),
+       }
+       addRate('RRDB', data)
+       return false
+   })
 })
