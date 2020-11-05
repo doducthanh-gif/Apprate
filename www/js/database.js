@@ -81,7 +81,7 @@ function addRate(collectionName, data) {
         navigator.notification.beep(1);
         navigator.vibrate(100)
         alert("Rated Successfully")
-        $('#listResRate').empty()
+        $('#searchPage').empty()
         loadHome()
     }
     newRate.onerror = () => {

@@ -30,9 +30,9 @@
       <div class="header">
         <div class="menu">
           <ul>
-            <li><a href="#home" class="active">Home</a></li>
+            <li id="index"><a href="#home" class="active">Home</a></li>
             <li id="feedback"><a href="feedback.html" class="active">Feedback</a></li>
-            <li id="search"><a href="#searchRate" class="active">Search</a></li>
+            <!-- <li id="search"><a href="#searchRate" class="active">Search</a></li> -->
           </ul>
         </div>
       </div>
@@ -46,9 +46,13 @@
       </div>
     </div>
     <div>
-      <ul id="listResRate">
-
-      </ul>
+      <form class="ui-filterable">
+        <input id="filterBasic-input" data-type="search">
+    </form>
+    <ul data-role="listview" data-filter="true" data-input="#filterBasic-input" id="searchPage">
+    </ul>
+      <!-- <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search fruits..." data-inset="true" id="searchPage">
+      </ul> -->
     </div>
   </div>
 
@@ -56,7 +60,7 @@
   <div id="detail1">
   </div>
 
-  <div data-role="page" id="searchRate">
+  <!-- <div data-role="page" id="searchRate">
     <div class="header-wrap">
       <div class="header">
         <div class="menu">
@@ -76,11 +80,11 @@
       </div>
     </div>
     <hr>
-    <div data-role="listview">
+    <div>
         <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search fruits..." data-inset="true" id="searchPage">
         </ul>
     </div>
-    </div>
+    </div> -->
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/database.js"></script>

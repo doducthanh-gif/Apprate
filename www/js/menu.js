@@ -19,35 +19,31 @@ function loadHome() {
 
             </li>
             `
-            $('#listResRate').append(html);
             $('#searchPage').append(html);
            
         }
     }
 }
 
+
 $(window).on("load", function () {
     loadHome()
   });
 $(document).ready(function () {
     $('#index').on('click', () => {
-        $('#listResRate').empty()
+        $('#searchPage').empty()
         loadHome()
     });
     $(document).on('click', '#delete_rate', function () {
         const rateid = $(this).attr("rateId")
         const result = deleteData(Number(rateid))
         result.onsuccess = function () {
-            $('#listResRate').empty()
+            $('#searchPage').empty()
             navigator.notification.beep(1);
             navigator.vibrate(100)
             loadHome()
         }
     });
-    $('#search').on('click', function () {
-        $('#searchPage').empty();
-        loadHome()
-    })
     $(document).on('click', '#detail_rate', function(){
         const rateId = $(this).attr("rateId")
         const result = detailsData(rateId)
