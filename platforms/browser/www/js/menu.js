@@ -44,6 +44,10 @@ $(document).ready(function () {
             loadHome()
         }
     });
+    $('#search').on('click', function () {
+        $('#searchPage').empty();
+        loadHome()
+    })
     $(document).on('click', '#detail_rate', function(){
         const rateId = $(this).attr("rateId")
         const result = detailsData(rateId)
